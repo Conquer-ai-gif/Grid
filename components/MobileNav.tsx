@@ -1,8 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, Home, Clock, History, Video, User, BookOpen, Play, BarChart2, MessageSquare, GraduationCap, Settings, LucideIcon, Zap } from 'lucide-react';
+import { Menu, Home, Clock, History, Video, User, BookOpen, Play, BarChart2, MessageSquare, GraduationCap, Settings, LucideIcon } from 'lucide-react';
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { sidebarLinks } from '@/constants';
 import { useUserRole } from '@/hooks/useUserRole';
@@ -29,10 +30,13 @@ const MobileNav = () => {
         </SheetTrigger>
         <SheetContent side="left" className="border-none bg-surface-1 border-r border-border-1 flex flex-col">
           <Link href="/" className="flex items-center gap-2 mb-8">
-            <div className="flex size-8 items-center justify-center rounded-lg bg-amber-1">
-              <Zap size={16} className="text-black fill-black" />
-            </div>
-            <p className="text-xl font-bold text-text-1">Yoom AI</p>
+            <Image
+              src="/images/grid-logo.jpeg"
+              alt="Grid"
+              width={100}
+              height={28}
+              className="h-7 w-auto object-contain"
+            />
           </Link>
 
           <div className="flex flex-col gap-1 flex-1">
@@ -61,7 +65,6 @@ const MobileNav = () => {
             })}
           </div>
 
-          {/* Role badge */}
           {role && (
             <div className="pt-4 border-t border-border-1">
               <span className={cn(
