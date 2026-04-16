@@ -52,7 +52,7 @@ export default function CoursesPage() {
         {role === 'lecturer' && (
           <button
             onClick={() => setShowCreate(true)}
-            className="flex items-center gap-2 rounded-xl bg-amber-1 px-4 py-2.5 text-sm font-semibold text-black hover:bg-amber-400 transition-all"
+            className="flex items-center gap-2 rounded-xl bg-amber-1 px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-600 transition-all"
           >
             <Plus size={16} /> New Course
           </button>
@@ -75,7 +75,7 @@ export default function CoursesPage() {
           {role === 'lecturer' && (
             <button
               onClick={() => setShowCreate(true)}
-              className="mt-2 flex items-center gap-2 rounded-xl bg-amber-1 px-5 py-2.5 text-sm font-semibold text-black hover:bg-amber-400 transition-all"
+              className="mt-2 flex items-center gap-2 rounded-xl bg-amber-1 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-600 transition-all"
             >
               <Plus size={15} /> Create first course
             </button>
