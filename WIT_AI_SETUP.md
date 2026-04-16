@@ -1,9 +1,9 @@
-# Wit.ai Setup Guide for Yoom AI
+# Wit.ai Setup Guide for Grid
 
 ## Step 1: Create App
 1. Go to https://wit.ai and log in with GitHub or Facebook
 2. Click "New App"
-3. Name it "yoom-lecture-ai"
+3. Name it "grid-lecture-ai"
 4. Language: English
 5. Click "Create"
 
