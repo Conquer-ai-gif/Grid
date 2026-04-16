@@ -11,7 +11,7 @@ import { Toaster } from '@/components/ui/toaster';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Yoom AI — Intelligent Lecture Platform',
+  title: 'Grid — Intelligent Lecture Platform',
   description: 'AI-powered lecture infrastructure for universities at scale',
   icons: { icon: '/icons/logo.svg' },
 };
@@ -23,7 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         appearance={{
           layout: {
             socialButtonsVariant: 'iconButton',
-            logoImageUrl: '/icons/yoom-logo.svg',
+            logoImageUrl: '/images/grid-logo.jpeg',
           },
           variables: {
             colorText: '#FDE68A',
