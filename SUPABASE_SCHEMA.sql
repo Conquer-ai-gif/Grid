@@ -233,3 +233,15 @@ CREATE TABLE IF NOT EXISTS course_enrollments (
 CREATE INDEX IF NOT EXISTS idx_enrollments_student ON course_enrollments(student_id);
 CREATE INDEX IF NOT EXISTS idx_enrollments_course ON course_enrollments(course_id);
 ALTER TABLE course_enrollments ENABLE ROW LEVEL SECURITY;
+
+-- ─── Registration Number: Migration ──────────────────────────
+-- Add registration_number to platform_users (for student identity)
+ALTER TABLE platform_users ADD COLUMN IF NOT EXISTS registration_number TEXT;
+CREATE UNIQUE INDEX IF NOT EXISTS idx_platform_users_reg_num ON platform_users(registration_number) WHERE registration_number IS NOT NULL;
+
+-- Add student_name and registration_number to quiz_responses
+ALTER TABLE quiz_responses ADD COLUMN IF NOT EXISTS student_name TEXT;
+ALTER TABLE quiz_responses ADD COLUMN IF NOT EXISTS registration_number TEXT;
+
+-- Index for quick lookup of quiz results by registration number
+CREATE INDEX IF NOT EXISTS idx_quiz_responses_reg_num ON quiz_responses(registration_number);
