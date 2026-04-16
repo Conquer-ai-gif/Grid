@@ -26,11 +26,11 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
             logoImageUrl: '/images/grid-logo.jpeg',
           },
           variables: {
-            colorText: '#FDE68A',
-            colorPrimary: '#F59E0B',
+            colorText: '#E5E7EB',
+            colorPrimary: '#3B82F6',
             colorBackground: '#050505',
             colorInputBackground: '#0A0A0A',
-            colorInputText: '#FDE68A',
+            colorInputText: '#E5E7EB',
           },
         }}
       >
