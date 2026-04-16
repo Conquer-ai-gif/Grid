@@ -9,57 +9,61 @@
 }
 
 :root {
-  --amber-primary: #F59E0B;
-  --amber-light:   #FDE68A;
-  --amber-muted:   #D4B483;
-  --amber-dim:     #1C1500;
-  --amber-border:  #1F1A00;
-  --surface-1:     #050505;
-  --surface-2:     #0A0A0A;
-  --text-primary:  #FDE68A;
-  --text-secondary:#D4B483;
-  --text-muted:    #2E2800;
+  --accent-primary:  #3B82F6;
+  --accent-hover:    #2563EB;
+  --accent-dim:      #1E3A5F;
+  --accent-border:   #1F2937;
+  --surface-base:    #0B0F14;
+  --surface-1:       #0F141A;
+  --surface-2:       #111827;
+  --border-default:  #1F2937;
+  --text-primary:    #E5E7EB;
+  --text-secondary:  #9CA3AF;
+  --text-muted:      #6B7280;
 }
 
 body {
-  background: #000000;
-  color: #D4B483;
+  background: #0B0F14;
+  color: #9CA3AF;
 }
 
 /* ── Stream SDK overrides ── */
 .str-video__call-stats           { max-width: 500px; position: relative; }
 .str-video__speaker-layout__wrapper { max-height: 700px; }
-.str-video__participant-details  { color: #FDE68A; }
-.str-video__menu-container       { color: #FDE68A; }
-.str-video__notification         { color: #FDE68A; }
+.str-video__participant-details  { color: #E5E7EB; }
+.str-video__menu-container       { color: #E5E7EB; }
+.str-video__notification         { color: #E5E7EB; }
 .str-video__participant-list     {
-  background-color: #050505;
+  background-color: #0F141A;
   padding: 10px;
   border-radius: 10px;
-  color: #FDE68A;
+  color: #E5E7EB;
   height: 100%;
-  border: 1px solid #1F1A00;
+  border: 1px solid #1F2937;
 }
 .str-video__call-controls__button { height: 40px; }
 
 /* ── Clerk overrides ── */
-.cl-userButtonPopoverActionButtonIcon { color: #FDE68A; }
+.cl-userButtonPopoverActionButtonIcon { color: #E5E7EB; }
 .cl-logoBox          { height: 40px; }
-.cl-dividerLine      { background: #1F1A00; height: 1px; }
-.cl-socialButtonsIconButton { border: 1px solid #2E2800; }
-.cl-internal-wkkub3  { color: #FDE68A; }
-.cl-userButtonPopoverActionButton { color: #FDE68A; }
+.cl-dividerLine      { background: #1F2937; height: 1px; }
+.cl-socialButtonsIconButton { border: 1px solid #374151; }
+.cl-internal-wkkub3  { color: #E5E7EB; }
+.cl-userButtonPopoverActionButton { color: #E5E7EB; }
 
 /* ── Glassmorphism ── */
-.glassmorphism  { background: rgba(245,158,11,0.08); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); border: 1px solid #1F1A00; }
-.glassmorphism2 { background: rgba(0,0,0,0.6);       backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+.glassmorphism  { background: rgba(59,130,246,0.05); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); border: 1px solid #1F2937; }
+.glassmorphism2 { background: rgba(11,15,20,0.6);    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
 
 /* ── Utilities ── */
 @layer utilities {
   .flex-center  { @apply flex justify-center items-center; }
   .flex-between { @apply flex justify-between items-center; }
-  .amber-glow   { box-shadow: 0 0 0 1px #F59E0B; }
-  .amber-ring   { outline: 1px solid #F59E0B; outline-offset: 2px; }
+  .accent-glow  { box-shadow: 0 0 0 1px #3B82F6; }
+  .accent-ring  { outline: 1px solid #3B82F6; outline-offset: 2px; }
+  /* legacy aliases kept for compatibility */
+  .amber-glow   { box-shadow: 0 0 0 1px #3B82F6; }
+  .amber-ring   { outline: 1px solid #3B82F6; outline-offset: 2px; }
 }
 
 /* ── Sidebar width animation ── */
@@ -76,24 +80,24 @@ body {
 
 /* ── Scrollbar ── */
 ::-webkit-scrollbar       { width: 4px; }
-::-webkit-scrollbar-track { background: #050505; }
-::-webkit-scrollbar-thumb { background: #1F1A00; border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: #F59E0B; }
+::-webkit-scrollbar-track { background: #0F141A; }
+::-webkit-scrollbar-thumb { background: #1F2937; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #3B82F6; }
 
 /* ── Date picker override ── */
 .react-datepicker {
-  background: #050505 !important;
-  border: 1px solid #1F1A00 !important;
-  color: #FDE68A !important;
+  background: #0F141A !important;
+  border: 1px solid #1F2937 !important;
+  color: #E5E7EB !important;
 }
-.react-datepicker__header { background: #0A0A0A !important; border-bottom: 1px solid #1F1A00 !important; }
+.react-datepicker__header { background: #111827 !important; border-bottom: 1px solid #1F2937 !important; }
 .react-datepicker__current-month,
 .react-datepicker__day-name,
-.react-datepicker__day { color: #D4B483 !important; }
-.react-datepicker__day:hover { background: #1C1500 !important; }
-.react-datepicker__day--selected { background: #F59E0B !important; color: #000 !important; }
-.react-datepicker__time-container { border-left: 1px solid #1F1A00 !important; }
-.react-datepicker__time { background: #050505 !important; }
-.react-datepicker__time-list-item { color: #D4B483 !important; }
-.react-datepicker__time-list-item:hover { background: #1C1500 !important; }
-.react-datepicker__time-list-item--selected { background: #F59E0B !important; color: #000 !important; }
+.react-datepicker__day { color: #9CA3AF !important; }
+.react-datepicker__day:hover { background: #1E3A5F !important; }
+.react-datepicker__day--selected { background: #3B82F6 !important; color: #fff !important; }
+.react-datepicker__time-container { border-left: 1px solid #1F2937 !important; }
+.react-datepicker__time { background: #0F141A !important; }
+.react-datepicker__time-list-item { color: #9CA3AF !important; }
+.react-datepicker__time-list-item:hover { background: #1E3A5F !important; }
+.react-datepicker__time-list-item--selected { background: #3B82F6 !important; color: #fff !important; }
