@@ -35,6 +35,9 @@ export default function OnboardingPage() {
   const deptDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const deptWrapperRef = useRef<HTMLDivElement>(null);
 
+  // Registration number (required for students)
+  const [registrationNumber, setRegistrationNumber] = useState('');
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -141,6 +144,11 @@ export default function OnboardingPage() {
       return;
     }
 
+    if (role === 'student' && !registrationNumber.trim()) {
+      setError('Students must enter their registration number.');
+      return;
+    }
+
     setLoading(true);
     try {
       const res = await fetch('/api/onboarding', {
@@ -150,6 +158,7 @@ export default function OnboardingPage() {
           role,
           university: toTitleCase(university),
           department: department.trim() ? toTitleCase(department.trim()) : null,
+          registration_number: role === 'student' ? registrationNumber.trim().toUpperCase() : null,
         }),
       });
 
@@ -167,7 +176,10 @@ export default function OnboardingPage() {
     }
   }
 
-  const isFormValid = role !== null && (selectedUniversity.length > 0 || query.trim().length >= 4);
+  const isFormValid =
+    role !== null &&
+    (selectedUniversity.length > 0 || query.trim().length >= 4) &&
+    (role !== 'student' || registrationNumber.trim().length >= 3);
 
   const roles = [
     { key: 'student' as const, label: 'Student', description: 'I attend lectures', icon: BookOpen },
@@ -271,6 +283,28 @@ export default function OnboardingPage() {
                 </p>
               )}
             </div>
+
+            {/* Registration Number — students only */}
+            {role === 'student' && (
+              <div>
+                <label htmlFor="registration_number" className="mb-2 flex items-center justify-between text-sm font-medium text-text-2">
+                  Registration Number
+                  <span className="text-xs font-normal text-amber-1">Required</span>
+                </label>
+                <input
+                  id="registration_number"
+                  type="text"
+                  value={registrationNumber}
+                  onChange={(e) => setRegistrationNumber(e.target.value.toUpperCase())}
+                  placeholder="e.g. CSC/2021/001"
+                  autoComplete="off"
+                  className="w-full rounded-xl border border-border-1 bg-surface-2 px-4 py-2.5 text-sm text-text-1 placeholder:text-text-3 outline-none focus:border-amber-1 focus:ring-1 focus:ring-amber-1 transition-colors"
+                />
+                <p className="mt-1.5 text-xs text-text-2 opacity-50">
+                  This is used to identify you in quizzes, attendance records, and results.
+                </p>
+              </div>
+            )}
 
             {/* Department autocomplete */}
             <div ref={deptWrapperRef} className="relative">
