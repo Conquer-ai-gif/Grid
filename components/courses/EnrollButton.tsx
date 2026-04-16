@@ -52,7 +52,7 @@ export function EnrollButton({ courseId }: Props) {
       className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-semibold transition-all ${
         enrolled
           ? 'border border-border-1 bg-surface-2 text-text-2 hover:border-red-400 hover:text-red-400'
-          : 'bg-amber-1 text-black hover:bg-amber-400'
+          : 'bg-amber-1 text-white hover:bg-blue-600'
       }`}
     >
       {working ? (
