@@ -178,12 +178,12 @@ export default function OnboardingPage() {
     <main className="flex min-h-screen w-full items-center justify-center bg-black px-4 py-12">
       <div className="w-full max-w-lg">
         <div className="mb-8 flex justify-center">
-          <Image src="/icons/yoom-logo.svg" alt="Yoom AI" width={120} height={40} priority />
+          <Image src="/images/grid-logo.jpeg" alt="Grid" width={120} height={40} priority />
         </div>
 
         <div className="rounded-2xl border border-border-1 bg-surface-1 p-8">
           <div className="mb-8 text-center">
-            <h1 className="text-2xl font-bold text-text-1">Welcome to Yoom AI</h1>
+            <h1 className="text-2xl font-bold text-text-1">Welcome to Grid</h1>
             <p className="mt-2 text-sm text-text-2 opacity-70">
               Let us personalise your experience. This only takes a moment.
             </p>
@@ -327,9 +327,9 @@ export default function OnboardingPage() {
             <button
               type="submit"
               disabled={!isFormValid || loading}
-              className="mt-2 w-full rounded-xl bg-amber-1 py-3 text-sm font-semibold text-black transition-all duration-200 hover:bg-amber-400 disabled:cursor-not-allowed disabled:opacity-40"
+              className="mt-2 w-full rounded-xl bg-amber-1 py-3 text-sm font-semibold text-black transition-all duration-200 hover:bg-blue-600 disabled:cursor-not-allowed disabled:opacity-40"
             >
-              {loading ? 'Saving…' : 'Continue to Yoom AI'}
+              {loading ? 'Saving…' : 'Continue to Grid'}
             </button>
           </form>
         </div>
