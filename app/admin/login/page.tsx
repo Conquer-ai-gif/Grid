@@ -53,7 +53,7 @@ export default function AdminLogin() {
             <Zap size={28} className="fill-black text-black" />
           </div>
           <div className="text-center">
-            <h1 className="text-2xl font-bold text-text-1">Yoom AI</h1>
+            <h1 className="text-2xl font-bold text-text-1">Grid</h1>
             <p className="text-sm text-text-3 mt-0.5">Admin access</p>
           </div>
         </div>
@@ -121,7 +121,7 @@ export default function AdminLogin() {
 
         {/* Back link */}
         <p className="mt-6 text-center text-xs text-text-3">
-          <a href="/" className="hover:text-amber-1 transition-colors">← Back to Yoom AI</a>
+          <a href="/" className="hover:text-blue-400 transition-colors">← Back to Grid</a>
         </p>
       </div>
     </div>
