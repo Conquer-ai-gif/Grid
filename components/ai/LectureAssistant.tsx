@@ -95,7 +95,7 @@ export function LectureAssistant({ lectureId }: { lectureId: string }) {
             <button
               onClick={sendMessage}
               disabled={isLoading || !input.trim()}
-              className="flex size-8 items-center justify-center rounded-lg bg-amber-1 disabled:opacity-40 hover:bg-amber-4 transition-all"
+              className="flex size-8 items-center justify-center rounded-lg bg-amber-1 disabled:opacity-40 hover:bg-amber-4 transition-all text-white"
             >
               <Send size={13} className="text-black" />
             </button>
