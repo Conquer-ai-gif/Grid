@@ -9,8 +9,8 @@ export const openrouter = new OpenAI({
   baseURL: 'https://openrouter.ai/api/v1',
   apiKey: process.env.OPENROUTER_API_KEY ?? '',
   defaultHeaders: {
-    'HTTP-Referer': process.env.NEXT_PUBLIC_BASE_URL ?? 'https://yoom-ai.vercel.app',
-    'X-Title': 'Yoom AI Lecture Platform',
+    'HTTP-Referer': process.env.NEXT_PUBLIC_BASE_URL ?? 'https://grid.vercel.app',
+    'X-Title': 'Grid Lecture Platform',
   },
 });
 
