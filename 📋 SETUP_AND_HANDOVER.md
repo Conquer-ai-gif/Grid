@@ -1,5 +1,5 @@
 # ============================================================
-# YOOM AI — WHAT WAS BUILT & WHAT YOU NEED TO DO
+# GRID — WHAT WAS BUILT & WHAT YOU NEED TO DO
 # ============================================================
 
 ## WHAT I BUILT
@@ -109,7 +109,7 @@ Key: train all 7 intents before testing voice commands.
 ### STEP 4 — Set up Inngest
 
 1. Go to https://app.inngest.com → Create account
-2. Create new app called "yoom-ai"
+2. Create new app called "grid"
 3. Copy Event Key and Signing Key
 4. After deploying to Vercel, go to Inngest → Apps → Add App
 5. Enter your Vercel URL + /api/inngest (e.g. https://your-app.vercel.app/api/inngest)
