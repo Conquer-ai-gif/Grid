@@ -10,7 +10,7 @@ interface QueuedEvent {
   retries: number;
 }
 
-const QUEUE_KEY = 'yoom_offline_queue';
+const QUEUE_KEY = 'grid_offline_queue';
 const MAX_RETRIES = 3;
 
 export function useOfflineQueue() {
