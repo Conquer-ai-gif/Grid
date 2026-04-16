@@ -1,4 +1,4 @@
-# Yoom AI — Remaining Features Roadmap
+# Grid — Remaining Features Roadmap
 
 ## ✅ 1. Notification System
 When a lecturer goes live, all students in the same university and department receive an instant in-app notification so they never miss a live lecture.
