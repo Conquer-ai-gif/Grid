@@ -136,7 +136,7 @@ export function CreateCourseModal({ onClose, onCreated }: Props) {
             <button
               type="submit"
               disabled={saving || !name.trim()}
-              className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-amber-1 py-2.5 text-sm font-semibold text-black hover:bg-amber-400 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+              className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-amber-1 py-2.5 text-sm font-semibold text-white hover:bg-blue-600 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
             >
               {saving ? <><Loader2 size={15} className="animate-spin" /> Creating…</> : 'Create Course'}
             </button>
