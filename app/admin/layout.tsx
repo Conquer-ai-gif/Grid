@@ -27,7 +27,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
             <Zap size={14} className="fill-black text-black" />
           </div>
           <span className="text-sm font-bold text-amber-1 tracking-widest uppercase">
-            Yoom AI Admin
+            Grid Admin
           </span>
         </div>
         <div className="flex items-center gap-4">
