@@ -17,48 +17,44 @@ const config = {
     },
     extend: {
       colors: {
-        // ── Terminal Amber on True Black ──────────────────────
-        black: { true: '#000000' },
+        // ── Vercel-inspired Dark Theme ─────────────────────────
+        black: { true: '#0B0F14' },
         surface: {
-          1: '#050505',  // navbar / sidebar
-          2: '#0A0A0A',  // cards
-          3: '#111111',  // card alt
-          4: '#1C1500',  // amber-tinted surface
+          1: '#0F141A',  // navbar / sidebar
+          2: '#111827',  // cards / elevated panels
+          3: '#1F2937',  // card alt
+          4: '#172554',  // accent-tinted surface
         },
+        // accent tokens — all map to #3B82F6 (blue) family
         amber: {
-          1: '#F59E0B',  // primary accent
-          2: '#FDE68A',  // headings / bright text
-          3: '#D4B483',  // body text
-          4: '#B45309',  // darker amber / danger
-          5: '#1C1500',  // amber dim bg
-          6: '#2E2800',  // amber very dim text
+          1: '#3B82F6',  // primary accent (blue)
+          2: '#E5E7EB',  // headings / bright text
+          3: '#9CA3AF',  // body text
+          4: '#2563EB',  // darker accent / hover
+          5: '#1E3A5F',  // accent dim bg (active states)
+          6: '#172554',  // accent very dim bg
         },
         border: {
-          1: '#1F1A00',  // default amber-tinted border
-          2: '#2E2800',  // stronger border
-          3: '#1A1A1A',  // neutral dark border
+          1: '#1F2937',  // default border
+          2: '#374151',  // stronger border
+          3: '#1F2937',  // neutral dark border
         },
         text: {
-          1: '#FDE68A',  // primary (headings)
-          2: '#D4B483',  // secondary (body)
-          3: '#2E2800',  // muted / hints
+          1: '#E5E7EB',  // primary (headings)
+          2: '#9CA3AF',  // secondary (body)
+          3: '#6B7280',  // muted / hints
         },
-        // kept for legacy component compat
         dark: {
-          1: '#050505',
-          2: '#000000',
-          3: '#0A0A0A',
-          4: '#111111',
+          1: '#0F141A',
+          2: '#0B0F14',
+          3: '#111827',
+          4: '#1F2937',
         },
-        blue: { 1: '#F59E0B' },   // mapped to amber
-        sky: {
-          1: '#D4B483',
-          2: '#FDE68A',
-          3: '#F59E0B',
-        },
-        orange:  { 1: '#F59E0B' },
-        purple:  { 1: '#B45309' },
-        yellow:  { 1: '#F59E0B' },
+        blue: { 1: '#3B82F6' },
+        sky:  { 1: '#9CA3AF', 2: '#E5E7EB', 3: '#3B82F6' },
+        orange:  { 1: '#3B82F6' },
+        purple:  { 1: '#2563EB' },
+        yellow:  { 1: '#3B82F6' },
       },
       keyframes: {
         'accordion-down': {
@@ -69,7 +65,7 @@ const config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
-        'pulse-amber': {
+        'pulse-accent': {
           '0%,100%': { opacity: '1' },
           '50%': { opacity: '0.4' },
         },
@@ -77,7 +73,7 @@ const config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'pulse-amber': 'pulse-amber 2s ease-in-out infinite',
+        'pulse-accent': 'pulse-accent 2s ease-in-out infinite',
       },
       backgroundImage: {
         hero: "url('/images/hero-background.png')",
