@@ -1,7 +1,7 @@
 import { cookies } from 'next/headers';
 import { NextRequest } from 'next/server';
 
-export const ADMIN_COOKIE = 'yoom_admin_session';
+export const ADMIN_COOKIE = 'grid_admin_session';
 // Cookie value is a signed token: timestamp + hash
 // This prevents someone from just setting the cookie manually
 
