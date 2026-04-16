@@ -1,5 +1,5 @@
 # ============================================================
-# YOOM AI — COMPLETE SETUP GUIDE & HANDOVER
+# GRID — COMPLETE SETUP GUIDE & HANDOVER
 # ============================================================
 
 ## WHAT WAS BUILT IN THIS UPDATE
