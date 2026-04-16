@@ -30,6 +30,11 @@ export async function POST(req: NextRequest) {
 
     const is_correct = answer_index === quiz.correct_answer;
 
+    // Resolve student's full name and registration number from Clerk metadata
+    const fullName = `${user.firstName ?? ''} ${user.lastName ?? ''}`.trim() || user.username || 'Unknown';
+    const meta = user.publicMetadata as Record<string, string | null | undefined>;
+    const registrationNumber = (meta?.registration_number as string | null) ?? null;
+
     // Upsert to prevent duplicate responses
     const { error } = await supabaseAdmin
       .from('quiz_responses')
@@ -37,6 +42,8 @@ export async function POST(req: NextRequest) {
         {
           quiz_id,
           user_id: user.id,
+          student_name: fullName,
+          registration_number: registrationNumber,
           answer_index,
           is_correct,
           responded_at: new Date().toISOString(),
