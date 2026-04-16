@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useCall } from '@stream-io/video-react-sdk';
 
-const STORAGE_KEY = 'yoom_data_saver';
+const STORAGE_KEY = 'grid_data_saver';
 
 export function useDataSaver() {
   const call = useCall();
