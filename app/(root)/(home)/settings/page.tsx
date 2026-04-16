@@ -206,7 +206,7 @@ export default function SettingsPage() {
           <button
             type="submit"
             disabled={saving || !hasChanged}
-            className="rounded-xl bg-amber-1 px-6 py-2.5 text-sm font-semibold text-black transition-all hover:bg-amber-400 disabled:cursor-not-allowed disabled:opacity-40"
+            className="rounded-xl bg-amber-1 px-6 py-2.5 text-sm font-semibold text-black transition-all hover:bg-blue-600 disabled:cursor-not-allowed disabled:opacity-40"
           >
             {saving ? 'Saving…' : 'Save changes'}
           </button>
