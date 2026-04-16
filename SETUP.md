@@ -1,4 +1,4 @@
-# Yoom AI — Setup Guide
+# Grid — Setup Guide
 
 Everything you need to do before the app works. Complete these steps in order.
 
