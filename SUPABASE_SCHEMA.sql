@@ -1,5 +1,5 @@
 -- ============================================================
--- YOOM AI — SUPABASE DATABASE SCHEMA
+-- GRID — SUPABASE DATABASE SCHEMA
 -- Run this in your Supabase SQL Editor (Project → SQL Editor)
 -- ============================================================
 
